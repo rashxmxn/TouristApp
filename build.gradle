@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        activityVersion = '1.4.0'
+        appCompatVersion = '1.4.1'
+        constraintLayoutVersion = '2.1.3'
+        coreTestingVersion = '2.1.0'
+        coroutines = '1.6.0'
+        lifecycleVersion = '2.4.0'
+        materialVersion = '1.5.0'
+        roomVersion = '2.4.1'
+        nav_version = "2.4.0-alpha04"
+        kotlin_version = '1.6.10'
+        core_ktx_version = "1.3.2"
+        datastore_version = "1.0.0"
+
+
+
+        // testing
+        junitVersion = '4.13.2'
+        espressoVersion = '3.4.0'
+        androidxJunitVersion = '1.1.3'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1"
+        classpath 'com.google.gms:google-services:4.3.15'
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.0-rc01"
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//plugins {
+//    id 'com.android.application' version '7.1.0' apply false
+//    id 'com.android.library' version '7.1.0' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+//}
+//
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}

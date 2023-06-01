@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/cityListFragment">
+
+<!--    Home-->
+    <fragment
+        android:id="@+id/cityListFragment"
+        android:name="com.example.touristapp.ui.city.CityListFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_city_list">
+        <action
+            android:id="@+id/action_siteListFragment_to_siteDetailsFragment"
+            app:destination="@id/siteDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/siteListFragment"
+        android:name="com.example.touristapp.ui.site.SiteListFragment"
+        android:label="Site"
+        tools:layout="@layout/fragment_site_list">
+        <argument
+            android:name="city"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/siteDetailsFragment"
+        android:name="com.example.touristapp.ui.site.SiteDetailsFragment"
+        android:label="Site Details"
+        tools:layout="@layout/fragment_site_details">
+        <argument
+            android:name="site"
+            app:argType="string" />
+    </fragment>
+
+<!--    Map-->
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.touristapp.ui.map.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map">
+    </fragment>
+
+<!--    Search-->
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.touristapp.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_siteDetailsFragment"
+            app:destination="@id/siteDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SearchMatchesFragment"
+        android:name="com.example.touristapp.ui.search.SearchMatchesFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search_matches">
+        <action
+            android:id="@+id/action_searchMatchesFragment_to_siteDetailsFragment"
+            app:destination="@id/siteDetailsFragment" />
+    </fragment>
+
+<!--    Wishlist-->
+    <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.example.touristapp.ui.wishlist.WishlistFragment"
+        android:label="@string/title_wishlist"
+        tools:layout="@layout/fragment_wishlist" >
+        <action
+            android:id="@+id/action_navigation_wishlist_self"
+            app:destination="@id/navigation_wishlist" />
+    </fragment>
+
+<!--    Itinerary-->
+    <fragment
+        android:id="@+id/navigation_itinerary"
+        android:name="com.example.touristapp.ui.itinerary.ItineraryFragment"
+        android:label="@string/title_itinerary"
+        tools:layout="@layout/fragment_itinerary" >
+        <action
+            android:id="@+id/action_navigation_itinerary_to_fragmentItineraryDetails"
+            app:destination="@id/fragmentItineraryDetails"/>
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right" />-->
+        <action
+            android:id="@+id/action_navigation_itinerary_to_fragmentAddItinerary"
+            app:destination="@id/fragmentAddItinerary"/>
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddItinerary"
+        android:name="com.example.touristapp.ui.itinerary.FragmentAddItinerary"
+        android:label="@string/title_itinerary"
+        tools:layout="@layout/fragment_add_itinerary" >
+        <action
+            android:id="@+id/action_fragmentAddItinerary_to_navigation_itinerary"
+            app:destination="@id/navigation_itinerary"/>
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right" />-->
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentItineraryDetails"
+        android:name="com.example.touristapp.ui.itinerary.FragmentItineraryDetails"
+        android:label="@string/title_itinerary"
+        tools:layout="@layout/fragment_itinerary_details" >
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_fragmentItineraryDetails_to_fragmentAddItinerary"
+            app:destination="@id/fragmentAddItinerary"/>
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right" />-->
+    </fragment>
+</navigation>

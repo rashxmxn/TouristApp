@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Tour Guide Application</string>
+    <string name="app_description"></string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_map">Map</string>
+    <string name="title_wishlist">Favorites</string>
+    <string name="title_itinerary">Itinerary</string>
+
+    <string name="action_switch_layout">Switch Layout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search_recent_header">Recent searches:</string>
+    <string name="search_hint">Search Sites</string>
+    <string name="search_no_results_found">No results found</string>
+    <string name="search_empty_message">Have a fruitful search experience here.</string>
+    <string name="history_empty_title">No recent search entries</string>
+    <string name="menu_clear_all_history">Clear history</string>
+    <string name="button_clear_search_string">Click here to clear the search string</string>
+
+    <string name="itinerary_name">Place Name</string>
+    <string name="itinerary_location">Place Location</string>
+    <string name="has_visited">Had Visited Before</string>
+    <string name="not_visited">Never Visited</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date (MM/DD/YYYY)</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+
+    <string name="normal_map">Normal Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="satellite_map">Satellite Map</string>
+    <string name="terrain_map">Terrain Map</string>
+</resources>
